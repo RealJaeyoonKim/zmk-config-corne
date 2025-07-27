@@ -124,5 +124,15 @@
                                      &trans &trans &trans               &trans &trans &trans       
             >;
         };
+
+        combos {
+            compatible = "zmk,combos";
+
+            jk_to_esc {                      /* give it any label you like */
+                timeout-ms = <30>;            /* 30 ms gap max between taps */
+                key-positions = < 23 24 >;    /* index of  J  and  K  keys  */
+                bindings      = < &kp ESC >;  /* send Esc when both down    */
+            };
+        };
     };
 };
